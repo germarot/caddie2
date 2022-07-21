@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+<!-- saved from url=(0073)https://fengyuanchen.github.io/cropperjs/examples/crop-a-round-image.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Cropper.js</title>
-  <link rel="stylesheet" href="../css/cropper.css">
   <style>
     .container {
       margin: 20px auto;
@@ -326,6 +324,7 @@
 .cropper-disabled .cropper-point {
   cursor: not-allowed;
 }
+
   </style>
 </head>
 <body>
@@ -333,7 +332,9 @@
     <h1>Crop a round image</h1>
     <h3>Image</h3>
     <div>
-      <img id="image" src="2.png" alt="Picture">
+      <img id="image" src="2.png" alt="Picture" class="cropper-hidden">
+      <div class="cropper-container cropper-bg" touch-action="none" style="width: 640px; height: 364px;">
+        <div class="cropper-wrap-box"><div class="cropper-canvas" style="width: 640px; height: 360px; transform: translateY(2px);"><img src="2.png" alt="Picture" class="cropper-hide" style="width: 640px; height: 360px; transform: none;"></div></div><div class="cropper-drag-box cropper-crop cropper-modal" data-cropper-action="crop"></div><div class="cropper-crop-box" style="width: 288px; height: 288px; transform: translateX(176px) translateY(38px);"><span class="cropper-view-box"><img src="2.png" alt="Picture" style="width: 640px; height: 360px; transform: translateX(-176px) translateY(-36px);"></span><span class="cropper-dashed dashed-h"></span><span class="cropper-dashed dashed-v"></span><span class="cropper-center"></span><span class="cropper-face cropper-move" data-cropper-action="all"></span><span class="cropper-line line-e" data-cropper-action="e"></span><span class="cropper-line line-n" data-cropper-action="n"></span><span class="cropper-line line-w" data-cropper-action="w"></span><span class="cropper-line line-s" data-cropper-action="s"></span><span class="cropper-point point-e" data-cropper-action="e"></span><span class="cropper-point point-n" data-cropper-action="n"></span><span class="cropper-point point-w" data-cropper-action="w"></span><span class="cropper-point point-s" data-cropper-action="s"></span><span class="cropper-point point-ne" data-cropper-action="ne"></span><span class="cropper-point point-nw" data-cropper-action="nw"></span><span class="cropper-point point-sw" data-cropper-action="sw"></span><span class="cropper-point point-se" data-cropper-action="se"></span></div></div>
     </div>
     <h3>Result</h3>
     <p>
@@ -347,7 +348,7 @@
 
 
   <script>
-    /*!
+/*!
  * Cropper.js v1.5.12
  * https://fengyuanchen.github.io/cropperjs
  *
@@ -357,7 +358,7 @@
  * Date: 2021-06-12T08:00:17.411Z
  */
 
-(function (global, factory) {
+ (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Cropper = factory());
@@ -3978,7 +3979,10 @@
   return Cropper;
 
 })));
+
   </script>
+
+
 
   <script>
     function getRoundedCanvas(sourceCanvas) {
@@ -4034,5 +4038,6 @@
       };
     });
   </script>
-</body>
-</html>
+
+
+</body></html>
